@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+  margin: 40px 10px;
+}
+
+.controls {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="text"], input[type="checkbox"] {
+  font-size: 1rem;
+  padding: 8px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#message {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  min-height: 1.5em;
+  font-weight: bold;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    gap: 4px;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .scoreboard {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #fff;
+  }
+  .cell {
+    background-color: #444;
+    color: #fff;
+  }
+  .cell:hover {
+    background-color: #555;
+  }
+  button {
+    background-color: #555;
+    color: #fff;
+  }
+  button:hover {
+    background-color: #666;
+  }
+}
