@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="controls">
+    <label for="player1">Player 1:</label>
+    <input id="player1" type="text" placeholder="Player 1 Name" />
+
+    <label for="player2">Player 2:</label>
+    <input id="player2" type="text" placeholder="Player 2 Name" />
+
+    <label>
+      <input type="checkbox" id="aiToggle" />
+      Play vs AI
+    </label>
+
+    <select id="aiDifficulty" style="display:none;" aria-label="AI Difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <button id="start">Start Game</button>
+    <button id="restart" disabled>Restart Round</button>
+  </div>
+
+  <div id="message" aria-live="polite">Enter names and start the game.</div>
+
+  <div class="scoreboard">
+    <div><span id="score1">0</span> - <span id="name1">Player 1</span></div>
+    <div><span id="score2">0</span> - <span id="name2">Player 2</span></div>
+  </div>
+
+  <div class="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
